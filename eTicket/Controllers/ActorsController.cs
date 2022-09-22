@@ -18,5 +18,10 @@ namespace eTicket.Controllers
             var data = await _service.GetAll();
             return View(data);
         }
+
+        public async Task<IActionResult> Create()
+        {
+            return View();
+        }
     }
 }
