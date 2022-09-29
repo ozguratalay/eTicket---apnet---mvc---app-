@@ -11,9 +11,11 @@ namespace eTicket.Constants.Services
         {
             _context = context;
         }
+
         public void Add(Actor actor)
         {
-            throw new NotImplementedException();
+            _context.Actors.Add(actor);
+            _context.SaveChanges();
         }
 
         public void Delete(int id)
@@ -32,10 +34,9 @@ namespace eTicket.Constants.Services
             throw new NotImplementedException();
         }
 
-        public Actor Update(int id, Actor actor)
+        public Actor Update(int id, Actor newActor)
         {
             throw new NotImplementedException();
         }
-
     }
 }
