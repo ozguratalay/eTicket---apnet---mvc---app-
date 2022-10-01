@@ -4,7 +4,6 @@ namespace eTicket.Models
 {
     public class Cinema
     {
-        [Key]
         public int Id { get; set; }
         [Display(Name="Logo")]
         public string Logo { get; set; }
@@ -13,6 +12,6 @@ namespace eTicket.Models
         [Display(Name = "Description")]
         public string Description { get; set; }
 
-        public List<Movie> Movies { get; set; }
+        public ICollection<Movie> Movies { get; set; }
     }
 }
